@@ -1,15 +1,25 @@
-import newsData from './newsData.json';
 import React from 'react';
+import newsData from './newsData.json';
+import shortenStr from '../utils/utils';
 const data = newsData
 
 const TestData = () => {
     console.log(data[0])
     return (
-        <div className="wrapper3">
-                <div className={"title"}>{data[0].title}</div>
-                <div className={"discription"}>{data[0].description}</div>
-                <div className={"image"}><img src={data[0].image}/></div>
+        <div class="newsContainer">
+            {
+                data.slice(0,10).map( (item, i) => {
+                    return (
+                <div key={i} className="wrapper3">
+                    <div className={"title"}>{ shortenStr(item.title,50)}</div>
+                    <div className={"discription"}>{shortenStr(item.description,200)}</div>
+                    <div className={"image"}><img src={item.image}/></div>
+                </div>);
+                })
+            
+            }
         </div>
+       
     );
 }
 

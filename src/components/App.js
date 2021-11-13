@@ -36,8 +36,8 @@ const App = () => (
         <Router>
             <Header topics={topics} name={name}/>
             <Routes>
-                <Route path='' element={('<Home/>')}>
-                   
+                <Route path='' element={('')}>
+                {/* <Home/> */}
                     {/* <Route path='Local' element={(<p>Local</p>)}/>
                     <Route path='Politics' element={(<p>Politics</p>)}/> */}
                 </Route>
@@ -54,9 +54,10 @@ const App = () => (
                     />
                 
             </Routes>
+            <TestData/>
             <Footer sections={sections} name={name}/>
             {/* <Articles/> */}
-            <TestData/>
+            
         </Router>
     </div>
     );

@@ -20,7 +20,7 @@ $xxlg: 1200px;
     @include flexCenter();
     flex-direction: column;
     font-size: 25px;
-    max-width: 100vw;
+    width: 100%;
 }
 .font-cookie{
     font-family: 'Cookie', cursive;
@@ -29,17 +29,18 @@ $xxlg: 1200px;
     @include flexCenter();
     font-size: 2em;
     border-bottom: 2px solid coral;
-    min-width: 100vw;
+    min-width: 100%;
     height: 70px;
 }
 .header{
     @include flexCenter();
+    width: 100%;
     flex-direction: column;
     background-color: bisque;
 }
 .navbar, .footerNav{
     @include flexCenter();
-    min-width: 100vw;
+    min-width: 100%;
     background-color: bisque;
     gap: 10px;
     padding:10px;
@@ -55,7 +56,18 @@ $xxlg: 1200px;
         }
     }
 }
+
+.newsContainer{
+    @include flexCenter();
+     width: 100%;
+     height: auto;
+    //  background-color: lightpink;
+     flex-wrap: wrap;
+     gap: 5px;
+ }
+
 .footer{
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding-top:25px;
@@ -63,12 +75,13 @@ $xxlg: 1200px;
 }
 .footer-logo{
     font-size: 1.5em;
-    min-width: 100vw;
+    min-width: 100%;
     background-color: rgb(214, 199, 129);
     padding-left: 5%;
 
 }
 .footerNav{
+    width: 100%;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -119,9 +132,12 @@ $xxlg: 1200px;
         object-fit: fill;
         width: 100%;
         height: 100%;
+        
     }
 
 }
+
+
 
 @media screen and (max-width: $xxsm) {
     .app{
@@ -130,7 +146,7 @@ $xxlg: 1200px;
     .wrapper3{
         width:95%;
         height: 25vh;
-        background-color: lightcoral;
+        // background-color: lightcoral;
         font-size: 10px;
         }
     .navbar{
@@ -144,14 +160,14 @@ $xxlg: 1200px;
     .wrapper3{
         
         width:100%;
-        height: 25vh;
-        background-color: lightcoral;
+        height: 40vh;
+        // background-color: lightcoral;
         }
         .navbar{
             display: none;
         }
         .footerNav{
-            width: 100vw;
+            width: 100%;
         }
 }
 @media screen and (max-width: $sm) and (min-width: $xsm) {
@@ -160,8 +176,8 @@ $xxlg: 1200px;
     }
     .wrapper3{
         width:90%;
-        height: 30vh;
-        background-color: lightcoral;
+        height: 40vh;
+        // background-color: lightcoral;
         }
     .navbar{
         display: none;
@@ -179,8 +195,8 @@ $xxlg: 1200px;
     }
     .wrapper3{
         width:80%;
-        height: 30vh;
-        background-color: lightcoral;
+        height: 40vh;
+        // background-color: lightcoral;
         }
 }
 @media screen and (max-width: $lg) and (min-width: $md) {
@@ -190,7 +206,7 @@ $xxlg: 1200px;
     .wrapper3{
         width:50%;
         height: 40vh;
-        background-color: lightcoral;
+        // background-color: lightcoral;
         }
 }
 
@@ -198,7 +214,7 @@ $xxlg: 1200px;
     .wrapper3{
         width:45%;
         height: 40vh;
-        background-color: lightcoral;
+        // background-color: lightcoral;
         }
         .app{
             font-size: 15px;
@@ -211,17 +227,20 @@ $xxlg: 1200px;
     .wrapper3{
         width:30%;
         height: 45vh;
-        background-color: lightcoral;
+        // background-color: lightcoral;
         }
         .navbar,.footerNav{
             
         }
 }
 @media screen and (min-width: $xxlg) {
+    .app{
+        font-size: 20px;
+    }
     .wrapper3{
         width:25%;
         height: 45vh;
-        background-color: lightcoral;
+        // background-color: lightcoral;
         }
     
 }
