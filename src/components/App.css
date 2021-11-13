@@ -1,0 +1,241 @@
+/* sass --watch src/components/App.scss src/components/App.css */
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 25px;
+  max-width: 100vw;
+}
+
+.font-cookie {
+  font-family: "Cookie", cursive;
+}
+
+.namelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  border-bottom: 2px solid coral;
+  min-width: 100vw;
+  height: 70px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: bisque;
+}
+
+.navbar, .footerNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  background-color: bisque;
+  gap: 10px;
+  padding: 10px;
+}
+
+.navUl, .footerNavUl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  list-style-type: none;
+}
+.navUl a, .footerNavUl a {
+  text-decoration: none;
+}
+.navUl a:visited, .footerNavUl a:visited {
+  color: black;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.footer-logo {
+  font-size: 1.5em;
+  min-width: 100vw;
+  background-color: #d6c781;
+  padding-left: 5%;
+}
+
+.footerNav {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.footerNavUl {
+  flex-direction: column;
+}
+
+.wrapper3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 5px;
+  width: 25%;
+  height: 45vh;
+}
+.wrapper3 .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 1em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
+  height: 15%;
+  text-size-adjust: 100%;
+}
+.wrapper3 .discription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-size: 0.7em;
+  height: 35%;
+  text-size-adjust: 100%;
+}
+@media screen and (max-width: 480px) {
+  .wrapper3 .discription {
+    font-size: 10px;
+  }
+}
+.wrapper3 .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  height: 60%;
+  width: 95%;
+}
+.wrapper3 .image img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  .app {
+    font-size: 10px;
+  }
+
+  .wrapper3 {
+    width: 95%;
+    height: 25vh;
+    background-color: lightcoral;
+    font-size: 10px;
+  }
+
+  .navbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .app {
+    font-size: 10px;
+  }
+
+  .wrapper3 {
+    width: 100%;
+    height: 25vh;
+    background-color: lightcoral;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .footerNav {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 600px) and (min-width: 480px) {
+  .app {
+    font-size: 10px;
+  }
+
+  .wrapper3 {
+    width: 90%;
+    height: 30vh;
+    background-color: lightcoral;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar, .footerNav {
+    font-size: 10px;
+    gap: 0px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .app {
+    font-size: 10px;
+  }
+
+  .wrapper3 {
+    width: 80%;
+    height: 30vh;
+    background-color: lightcoral;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 768px) {
+  .app {
+    font-size: 12px;
+  }
+
+  .wrapper3 {
+    width: 50%;
+    height: 40vh;
+    background-color: lightcoral;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+  .wrapper3 {
+    width: 45%;
+    height: 40vh;
+    background-color: lightcoral;
+  }
+
+  .app {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+  .app {
+    font-size: 20px;
+  }
+
+  .wrapper3 {
+    width: 30%;
+    height: 45vh;
+    background-color: lightcoral;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper3 {
+    width: 25%;
+    height: 45vh;
+    background-color: lightcoral;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
