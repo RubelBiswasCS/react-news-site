@@ -51,6 +51,7 @@
 }
 .navUl a, .footerNavUl a {
   text-decoration: none;
+  color: black;
 }
 .navUl a:visited, .footerNavUl a:visited {
   color: black;

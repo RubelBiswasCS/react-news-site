@@ -3,17 +3,22 @@ import newsData from './newsData.json';
 import shortenStr from '../utils/utils';
 const data = newsData
 
-const TestData = () => {
-    console.log(data[0])
+const TestData = (props) => {
+    //console.log(data[0])
     return (
-        <div class="newsContainer">
+        <div className="newsContainer">
             {
-                data.slice(0,10).map( (item, i) => {
+                data.slice(0,data.length-1).filter( item => {
+                    if(props.topic===undefined){
+                        return true;
+                        }
+                    return (item['category']===props.topic);
+                }).map( (item, i) => {
                     return (
                 <div key={i} className="wrapper3">
                     <div className={"title"}>{ shortenStr(item.title,50)}</div>
                     <div className={"discription"}>{shortenStr(item.description,200)}</div>
-                    <div className={"image"}><img src={item.image}/></div>
+                    <div className={"image"}><img src={item.image} alt=""/></div>
                 </div>);
                 })
             

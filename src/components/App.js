@@ -13,8 +13,8 @@ import TestData from './LoadData';
 const name = 'nameaslogo';
 const topics = [
         'National','Global','Politics','Business', 'Opinion',
-        'Tech', 'Science','Health','Sports','Arts',
-        'Books','Style','Food','Travel','Magazine',
+        'Technology', 'Science','Health','Sports','Arts',
+        'Books','Style','Food','Travel','Entertainment',
     ];
 const sections = {
     news : [
@@ -36,12 +36,12 @@ const App = () => (
         <Router>
             <Header topics={topics} name={name}/>
             <Routes>
-                <Route path='' element={('')}>
+                <Route path='' element={<TestData />}>
                 {/* <Home/> */}
                     {/* <Route path='Local' element={(<p>Local</p>)}/>
                     <Route path='Politics' element={(<p>Politics</p>)}/> */}
                 </Route>
-                { topics.map((topic) => (<Route key={topic.toLocaleLowerCase()} path={topic.toLocaleLowerCase()} element={(<p>{topic}</p>)}/>))}
+                { topics.map((topic) => (<Route key={topic.toLowerCase()} path={topic.toLowerCase()} element={<TestData topic={topic.toLowerCase()}/>}/>))}
                 {/* <Route path='Local' element={(<p>Local</p>)}/>
                 <Route path='Politics' element={(<p>Politics</p>)}/> */}
                 <Route
@@ -54,7 +54,7 @@ const App = () => (
                     />
                 
             </Routes>
-            <TestData/>
+            {/* <TestData/> */}
             <Footer sections={sections} name={name}/>
             {/* <Articles/> */}
             
