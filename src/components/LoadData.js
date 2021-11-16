@@ -1,18 +1,16 @@
 import React from 'react';
-import newsData from './newsData.json';
+//import newsData from './newsData.json';
 import shortenStr from '../utils/utils';
 import {Link} from "react-router-dom";
 
 
 
 const TestData = (props) => {
-
-    const data = newsData;
+    let data = props.data
+    //const data = newsData;
     //console.log(data[0])
     return (
         <div className="newsContainer">
-             
-              
             
             {   
               

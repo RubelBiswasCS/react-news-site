@@ -48,9 +48,9 @@ const App = () => {
     return(
     <div className='app'>
         <Router>
-            <Header topics={topics} name={name}/>
+                <Header topics={topics} name={name}/>
             <Routes>
-                <Route path='' element={<TestData />}>
+                <Route path='' element={<TestData data={data} />}>
                 {/* <Home/> */}
                     {/* <Route path='Local' element={(<p>Local</p>)}/>
                     <Route path='Politics' element={(<p>Politics</p>)}/> */}
@@ -61,7 +61,7 @@ const App = () => {
                     return(
                         <Route key={i} path={"/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(/[ ’]/g, x => ({' ': '-', "’": ''}[x]))} element={<Article article={article}/>} />
                 );} )}
-                { topics.map((topic) => (<Route key={topic.toLowerCase()} path={topic.toLowerCase()} element={<TestData topic={topic.toLowerCase()}/>}/>))}
+                { topics.map((topic) => (<Route key={topic.toLowerCase()} path={topic.toLowerCase()} element={<TestData data={data} topic={topic.toLowerCase()}/>}/>))}
                 {/* <Route path='Local' element={(<p>Local</p>)}/>
                 <Route path='Politics' element={(<p>Politics</p>)}/> */}
                 

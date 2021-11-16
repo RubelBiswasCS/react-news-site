@@ -158,6 +158,23 @@
   justify-content: center;
   flex-direction: column;
 }
+.article .article-title {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.article .article-content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.article .article-content a:hover {
+  color: green;
+  font-size: 1.2em;
+}
 .article small {
   width: 100%;
   justify-content: flex-start;

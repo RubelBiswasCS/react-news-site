@@ -147,11 +147,27 @@ $xxlg: 1200px;
 .article{
     @include flexCenter();
     flex-direction: column;
+    .article-title{
+        width: 90%;
+        @include flexCenter();
+    }
+    .article-content{
+        width: 80%;
+        @include flexCenter();
+        flex-direction: column;
+        a{
+            &:hover{
+                color: green;
+                font-size: 1.2em;
+            }
+        }
+    }
     small{
         width: 100%;
         justify-content: flex-start;
         background-color: beige;
     }
+
 }
 
 
