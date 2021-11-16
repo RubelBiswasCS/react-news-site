@@ -19,7 +19,7 @@ $xxlg: 1200px;
 .app{
     @include flexCenter();
     flex-direction: column;
-    font-size: 20px;
+    font-size: 1rem;
     width: 100%;
     
     a{
@@ -35,7 +35,7 @@ $xxlg: 1200px;
 }
 .namelogo{
     @include flexCenter();
-    font-size: 2em;
+    font-size: 2rem;
     border-bottom: 2px solid coral;
     min-width: 100%;
     height: 70px;
@@ -84,7 +84,7 @@ $xxlg: 1200px;
     padding-bottom:25px;
 }
 .footer-logo{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     min-width: 100%;
     background-color: rgb(214, 199, 129);
     padding-left: 5%;
@@ -106,12 +106,12 @@ $xxlg: 1200px;
     border: 1px solid black;
     padding: 5px;
     width: 25%;
-    height: 45vh;
+    min-height: 45vh;
 
     .title{
         @include flexCenter();
         color: black;
-        font-size: 1em;
+        font-size: 1rem;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
         height: 15%;
         text-size-adjust: 100%;
@@ -123,9 +123,6 @@ $xxlg: 1200px;
         font-size: .7em;
         height: 35%;
         text-size-adjust: 100%;
-        @media screen and (max-width: $xsm) {
-            font-size: 10px;
-        }
     }
     .image{
         @include flexCenter();
@@ -148,7 +145,7 @@ $xxlg: 1200px;
 }
 .article-page{
     @include flexCenter();
-    width: 100%;
+    width: 90%;
     // background-color: rgb(139, 35, 35);
     flex-direction: row;
     align-items: flex-start;
@@ -159,16 +156,18 @@ $xxlg: 1200px;
         flex-direction: column;
         //margin-top: 20px;;
         //background-color: greenyellow;
-        width: 25%;
+        width: 20%;
         .relatedArticle{
             @include flexCenter();
             flex-direction: column;
            
-            max-height: 20vh;
-            width: 90%;
-            padding:5px;
-            margin:2.5px;
-            gap:10px;
+            //max-height: 20vh;
+            width: 100%;
+            padding:5%;
+            margin:5%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            
             border-top: 1px solid black;
             //border-bottom: 1px solid black;
             //background-color: hotpink;
@@ -176,11 +175,11 @@ $xxlg: 1200px;
                 width: 100%;
                 font-size: 1em;
                 color: black;
-                font-weight: 800;
+                font-weight: 700;
             }
             .discription{
                 width: 100%;
-                font-size: .9em;
+                font-size: .6em;
             }
         }
     }
@@ -233,16 +232,16 @@ $xxlg: 1200px;
 
 }
 
-
-@media screen and (max-width: $xxsm) {
-    .app{
+// 1 $xxsm less than 320px
+@media screen and (max-width: 320px) {
+    .appp{
         font-size: 10px;
     }
     .wrapper3{
         width:95%;
-        height: 25vh;
+        height: 40vh;
         // background-color: lightcoral;
-        font-size: 10px;
+        //font-size: 10px;
         }
     .navbar{
         display: none;
@@ -257,9 +256,10 @@ $xxlg: 1200px;
         }
     }
 }
-@media screen and (max-width: $xsm) and (min-width: $xxsm) {
-    .app{
-        font-size: 10px;
+// 2 $xxsm - $xsm => greater than 320px but less than 480px
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .appp{
+        font-size: 5px;
     }
     .wrapper3{
         
@@ -284,12 +284,14 @@ $xxlg: 1200px;
         }
     }
 }
-@media screen and (max-width: $sm) and (min-width: $xsm) {
-    .app{
-        font-size: 10px;
+
+// 3 $xsm - $sm , 480px<wd<600
+@media screen and (min-width: 480px) and (max-width: 600px) {
+    .appp{
+        font-size: 6px;
     }
     .wrapper3{
-        width:90%;
+        width:45%;
         height: 40vh;
         // background-color: lightcoral;
         }
@@ -297,58 +299,85 @@ $xxlg: 1200px;
         display: none;
     }
     .navbar, .footerNav{
-        font-size: 10px;
+        font-size: .9rem;
         gap:0px;
     }
+    .relatedArticles{
+        font-size: .6rem;
+    }
+    
 }
-@media screen and (max-width: $md) and (min-width: $sm) {
-    .app{
-        font-size: 10px;
+
+// 4 sm-md 600px 768
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .appp{
+        font-size: 8px;
         
 
     }
-    .wrapper3{
-        width:80%;
-        height: 40vh;
-        // background-color: lightcoral;
-        }
-}
-@media screen and (max-width: $lg) and (min-width: $md) {
-    .app{
-        font-size: 12px;
-    }
-    .wrapper3{
-        width:50%;
-        height: 40vh;
-        // background-color: lightcoral;
-        }
-}
-
-@media screen and (max-width: $xlg) and (min-width: $lg) {
     .wrapper3{
         width:45%;
         height: 40vh;
         // background-color: lightcoral;
         }
-        .app{
-            font-size: 15px;
-        }
+    .relatedArticles{
+        font-size: .7rem;
+    }
+    .navbar{
+        font-size: .60rem;
+    }    
 }
-@media screen and (max-width: $xxlg) and (min-width: $xlg) {
-    .app{
-        font-size: 15px;
+
+// 5 md-lg 768-900
+@media screen and (min-width: 768px) and (max-width: 900px) {
+    .appp{
+        font-size: 10px;
+    }
+    .wrapper3{
+        width:30%;
+        height: 40vh;
+        // background-color: lightcoral;
+        }
+        .relatedArticles{
+            font-size: .8rem;
+        }
+        .navbar{
+            font-size: .8rem;
+        } 
+}
+
+// 6 lg - xlg 900 - 1024
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    .wrapper3{
+        width:30%;
+        height: 40vh;
+        // background-color: lightcoral;
+        }
+        .appp{
+            font-size: 12px;
+        }
+        .relatedArticles{
+            font-size: .85rem;
+        }
+        .navbar{
+            font-size: .85rem;
+        } 
+}
+
+// 7 xlg-xxlg 1024 - 1200
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .appp{
+        font-size: 14px;
     }
     .wrapper3{
         width:30%;
         height: 45vh;
         // background-color: lightcoral;
         }
-        .navbar,.footerNav{
-            
-        }
-}
-@media screen and (min-width: $xxlg) {
-    .app{
+    }       
+// 8 gt xxlg 1200<
+@media screen and (min-width: 1200px) {
+    .appp{
         font-size: 16px;
     }
     .wrapper3{
