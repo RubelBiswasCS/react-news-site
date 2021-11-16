@@ -21,6 +21,13 @@ $xxlg: 1200px;
     flex-direction: column;
     font-size: 25px;
     width: 100%;
+    a{
+        text-decoration: none;
+        color: black;
+        &:visited{
+            color: black;
+        }
+    }
 }
 .font-cookie{
     font-family: 'Cookie', cursive;

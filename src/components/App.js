@@ -9,7 +9,15 @@ import Header from './Header'
 import Footer from './Footer'
 // import Articles from './Articles';
 import TestData from './LoadData';
+import Article from './Articel';
 
+import {useState } from "react";
+
+import shortenStr from '../utils/utils';
+import newsData from './newsData.json';
+
+
+const data = newsData;
 const name = 'nameaslogo';
 const topics = [
         'National','Global','Politics','Business', 'Opinion',
@@ -31,7 +39,13 @@ const sections = {
         'Multimedia','Video','Podcast','Photography',
     ]
 }
-const App = () => (
+const App = () => { 
+    // const [currentArticle,setCurrentArticle] = useState('');
+    // const handleUrl = (url) => {
+    //     console.log(url)
+    //     setCurrentArticle(url);
+    // }
+    return(
     <div className='app'>
         <Router>
             <Header topics={topics} name={name}/>
@@ -41,9 +55,16 @@ const App = () => (
                     {/* <Route path='Local' element={(<p>Local</p>)}/>
                     <Route path='Politics' element={(<p>Politics</p>)}/> */}
                 </Route>
+                
+                {data.map((article,i) => {
+                    //console.log("/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(" ","-"));
+                    return(
+                        <Route key={i} path={"/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(/[ ’]/g, x => ({' ': '-', "’": ''}[x]))} element={<Article article={article}/>} />
+                );} )}
                 { topics.map((topic) => (<Route key={topic.toLowerCase()} path={topic.toLowerCase()} element={<TestData topic={topic.toLowerCase()}/>}/>))}
                 {/* <Route path='Local' element={(<p>Local</p>)}/>
                 <Route path='Politics' element={(<p>Politics</p>)}/> */}
+                
                 <Route
                     path="*"
                     element={
@@ -61,5 +82,6 @@ const App = () => (
         </Router>
     </div>
     );
+}
 
 export default App;

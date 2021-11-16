@@ -8,6 +8,13 @@
   font-size: 25px;
   width: 100%;
 }
+.app a {
+  text-decoration: none;
+  color: black;
+}
+.app a:visited {
+  color: black;
+}
 
 .font-cookie {
   font-family: "Cookie", cursive;
