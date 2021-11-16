@@ -144,7 +144,15 @@ $xxlg: 1200px;
     }
 
 }
-
+.article{
+    @include flexCenter();
+    flex-direction: column;
+    small{
+        width: 100%;
+        justify-content: flex-start;
+        background-color: beige;
+    }
+}
 
 
 @media screen and (max-width: $xxsm) {

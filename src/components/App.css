@@ -152,6 +152,18 @@
   height: 100%;
 }
 
+.article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.article small {
+  width: 100%;
+  justify-content: flex-start;
+  background-color: beige;
+}
+
 @media screen and (max-width: 320px) {
   .app {
     font-size: 10px;
