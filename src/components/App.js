@@ -11,7 +11,7 @@ import Footer from './Footer'
 import TestData from './LoadData';
 import Article from './Articel';
 
-import {useState } from "react";
+import {useState,useEffect } from "react";
 
 import shortenStr from '../utils/utils';
 import newsData from './newsData.json';
@@ -45,6 +45,9 @@ const App = () => {
     //     console.log(url)
     //     setCurrentArticle(url);
     // }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
     return(
     <div className='app'>
         <Router>
