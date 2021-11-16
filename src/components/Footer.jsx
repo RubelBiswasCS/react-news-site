@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const Footer = (props) => (
         
         <div className={"footer"}>
-            <div className={'font-cookie footer-logo'} >{props.name}</div>
+            <div className={'font-cookie footer-logo'} ><Link to="">{props.name}</Link></div>
             <div className={"footerNav"}>
                 {Object.keys(props.sections).map(
                         (section) => (

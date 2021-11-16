@@ -59,7 +59,7 @@ const App = () => {
                 {data.map((article,i) => {
                     //console.log("/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(" ","-"));
                     return(
-                        <Route key={i} path={"/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(/[ ’]/g, x => ({' ': '-', "’": ''}[x]))} element={<Article article={article}/>} />
+                        <Route key={i} path={"/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(/[ ’‘]/g, x => ({' ': '-', "’": '',"‘":''}[x]))} element={<Article article={article} relatedArticles={data.filter((d) => d.category === article.category).slice(0,10)}/>} />
                 );} )}
                 { topics.map((topic) => (<Route key={topic.toLowerCase()} path={topic.toLowerCase()} element={<TestData data={data} topic={topic.toLowerCase()}/>}/>))}
                 {/* <Route path='Local' element={(<p>Local</p>)}/>
