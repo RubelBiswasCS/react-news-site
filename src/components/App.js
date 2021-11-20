@@ -41,7 +41,7 @@ const sections = {
     ]
 }
 
-const homeUrl = '/react-news-site/'
+const homeUrl = process.env.PUBLIC_URL+'/'
 
 
 const App = () => { 
@@ -52,7 +52,7 @@ const App = () => {
             <ScrollToTop/>
                 <Header topics={topics} homeUrl={homeUrl} name={name}/>
             <Routes>
-                <Route path={homeUrl} element={<TestData data={data} />}>
+                <Route path={homeUrl} element={<TestData homeUrl={homeUrl} data={data} />}>
                 {/* <Home/> */}
                     {/* <Route path='Local' element={(<p>Local</p>)}/>
                     <Route path='Politics' element={(<p>Politics</p>)}/> */}
