@@ -7,10 +7,13 @@ import {
     Link
   } from "react-router-dom";
 import shortenStr from '../utils/utils';
+
+
+
   const Article = (props) => {
-        useEffect(() => {
-            window.scrollTo(0, 0);
-        });
+        // useEffect(() => {
+        //     window.scrollTo(0, 0);
+        // });
         return (
          <div className="article-page">
             <div className={"article"}>

@@ -15,10 +15,12 @@ import {useState,useEffect } from "react";
 
 import shortenStr from '../utils/utils';
 import newsData from './newsData.json';
-
+import ScrollToTop from './ScrollToTop';
+import NewsData from './NewsData';
 
 const data = newsData;
-const name = 'nameaslogo';
+
+const name = 'The News Time';
 const topics = [
         'National','Global','Politics','Business', 'Opinion',
         'Technology', 'Science','Health','Sports','Arts',
@@ -39,18 +41,16 @@ const sections = {
         'Multimedia','Video','Podcast','Photography',
     ]
 }
+
+
+
+
 const App = () => { 
-    // const [currentArticle,setCurrentArticle] = useState('');
-    // const handleUrl = (url) => {
-    //     console.log(url)
-    //     setCurrentArticle(url);
-    // }
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    });
+ 
     return(
     <div className='app'>
         <Router>
+            <ScrollToTop/>
                 <Header topics={topics} name={name}/>
             <Routes>
                 <Route path='' element={<TestData data={data} />}>
@@ -81,7 +81,7 @@ const App = () => {
             {/* <TestData/> */}
             <Footer sections={sections} name={name}/>
             {/* <Articles/> */}
-            
+            {/* <NewsData/> */}
         </Router>
     </div>
     );
