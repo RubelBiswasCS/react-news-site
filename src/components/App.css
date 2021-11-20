@@ -323,6 +323,10 @@
   .article-page .relatedArticles {
     width: 100%;
   }
+
+  .footerNav {
+    font-size: 0.6rem;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .appp {
@@ -348,6 +352,7 @@
 
   .footerNav {
     width: 100%;
+    font-size: 0.7rem;
   }
 
   .article-page {

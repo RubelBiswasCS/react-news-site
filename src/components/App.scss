@@ -308,6 +308,9 @@ $xxlg: 1200px;
             width: 100%;
         }
     }
+    .footerNav{
+        font-size: .6rem;
+    }
 }
 // 2 $xxsm - $xsm => greater than 320px but less than 480px
 @media screen and (min-width: 320px) and (max-width: 480px){
@@ -331,6 +334,7 @@ $xxlg: 1200px;
     }
     .footerNav{
         width: 100%;
+        font-size: .7rem;
     }
     .article-page{
         flex-direction: column;
