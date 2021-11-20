@@ -11,7 +11,7 @@ import Footer from './Footer'
 import TestData from './LoadData';
 import Article from './Articel';
 
-import {useState,useEffect } from "react";
+// import {useState,useEffect } from "react";
 
 import shortenStr from '../utils/utils';
 import newsData from './newsData.json';
