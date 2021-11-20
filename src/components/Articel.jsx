@@ -27,7 +27,7 @@ import shortenStr from '../utils/utils';
                     <p>
                         {props.article.description}
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, quia reprehenderit accusantium facilis labore corporis, officiis eligendi nisi, in consequuntur distinctio ex non vitae laborum animi at eius aut eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam distinctio perspiciatis, iure earum molestias omnis, at similique nostrum cumque ea et? Laudantium, repellendus. Accusamus quos quis praesentium dicta est soluta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, consectetur dignissimos a officiis sunt aperiam iusto quia adipisci dolore ipsa harum praesentium magni, possimus nobis fugit et commodi itaque amet!
-                        read original article <a target="_blank" href={props.article.url}>here</a>
+                        read original article <a target="_blank" href={props.article.url} rel="noopener noreferrer">here</a>
                     </p>
                 </div>
                 
