@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import {
-    HashRouter as Router,
+    BrowserRouter as Router,
     Routes,
     Route
   } from "react-router-dom";
@@ -50,7 +50,7 @@ const App = () => {
     <div className='app'>
         <Router>
             <ScrollToTop/>
-                <Header topics={topics} name={name}/>
+                <Header topics={topics} homeUrl={homeUrl} name={name}/>
             <Routes>
                 <Route path={homeUrl} element={<TestData data={data} />}>
                 {/* <Home/> */}
@@ -61,9 +61,9 @@ const App = () => {
                 {data.map((article,i) => {
                     //console.log("/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(" ","-"));
                     return(
-                        <Route key={i} path={homeUrl+"/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(/[ ’‘]/g, x => ({' ': '-', "’": '',"‘":''}[x]))} element={<Article article={article} relatedArticles={data.filter((d) => d.category === article.category).slice(0,10)}/>} />
+                        <Route key={i} path={homeUrl+"/"+article.category+'/'+article.published_at.slice(0,10)+'/'+shortenStr(article.title,25).replaceAll(/[ ’‘]/g, x => ({' ': '-', "’": '',"‘":''}[x]))} element={<Article homeUrl={homeUrl} article={article} relatedArticles={data.filter((d) => d.category === article.category).slice(0,10)}/>} />
                 );} )}
-                { topics.map((topic) => (<Route key={topic.toLowerCase()} path={homeUrl+topic.toLowerCase()} element={<TestData data={data} topic={topic.toLowerCase()}/>}/>))}
+                { topics.map((topic) => (<Route key={topic.toLowerCase()} path={homeUrl+topic.toLowerCase()} element={<TestData homeUrl={homeUrl} data={data} topic={topic.toLowerCase()}/>}/>))}
                 {/* <Route path='Local' element={(<p>Local</p>)}/>
                 <Route path='Politics' element={(<p>Politics</p>)}/> */}
                 
@@ -78,7 +78,7 @@ const App = () => {
                 
             </Routes>
             {/* <TestData/> */}
-            <Footer sections={sections} name={name}/>
+            <Footer sections={sections} homeUrl={homeUrl} name={name}/>
             {/* <Articles/> */}
             {/* <NewsData/> */}
         </Router>

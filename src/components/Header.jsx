@@ -9,7 +9,7 @@ const Header = (props) => {
             <div className={"namelogo font-cookie"}><Link to="">{props.name}</Link></div> 
             <div className="navbar">
                 <ul className="navUl">
-                    {props.topics.map( (topic) => (<Link key={topic.toLowerCase()} to={topic.toLowerCase()}>{topic}</Link>))}
+                    {props.topics.map( (topic) => (<Link key={topic.toLowerCase()} to={props.homeUrl+topic.toLowerCase()}>{topic}</Link>))}
                 </ul>
             </div>
         </div>

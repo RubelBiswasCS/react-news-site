@@ -12,7 +12,7 @@ const Footer = (props) => (
                         <ul key={section.toLowerCase()} className="footerNavUl">
                             <p>{section.toUpperCase()}</p>
                             {props.sections[section].map(
-                                section => (<li key={section.toLowerCase()}><Link to={section.toLowerCase()}>{section}</Link></li>)
+                                section => (<li key={section.toLowerCase()}><Link to={props.homeUrl+section.toLowerCase()}>{section}</Link></li>)
                             )}
                         </ul>
                             )
