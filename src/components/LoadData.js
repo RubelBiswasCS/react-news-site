@@ -23,7 +23,7 @@ const TestData = (props) => {
                 }).map( (item, i) => {
                     return (
 
-                        <Link to={"/"+item.category+'/'+item.published_at.slice(0,10)+'/'+shortenStr(item.title,25).replaceAll(/[ ’‘]/g, x => ({' ': '-', "’": '',"‘":''}[x]))} key={i} className="wrapper3">
+                        <Link to={props.homeUrl+item.category+'/'+item.published_at.slice(0,10)+'/'+shortenStr(item.title,25).replaceAll(/[ ’‘]/g, x => ({' ': '-', "’": '',"‘":''}[x]))} key={i} className="wrapper3">
                             <div className={"title"}>{ shortenStr(item.title,50)}</div>
                             <div className={"discription"}>{shortenStr(item.description,200)}</div>
                             <div className={"image"}><img src={item.image} alt=""/></div>

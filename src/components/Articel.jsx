@@ -41,7 +41,7 @@ import shortenStr from '../utils/utils';
                     }).map( (item, i) => {
                         return (
 
-                            <Link className={"relatedArticle"} to={props.homeUrl+"/"+item.category+'/'+item.published_at.slice(0,10)+'/'+shortenStr(item.title,25).replaceAll(/[ ’‘]/g, x => ({' ': '-', "’": '',"‘":''}[x]))} key={i} >
+                            <Link className={"relatedArticle"} to={props.homeUrl+item.category+'/'+item.published_at.slice(0,10)+'/'+shortenStr(item.title,25).replaceAll(/[ ’‘]/g, x => ({' ': '-', "’": '',"‘":''}[x]))} key={i} >
                                 <div className={"title"}>{ shortenStr(item.title,30)}</div>
                                 <div className={"discription"}>{shortenStr(item.description,100)}</div>
                                 {/* <div className={"image"}><img src={item.image} alt=""/></div> */}
