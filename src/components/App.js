@@ -16,7 +16,6 @@ import {useState,useEffect } from "react";
 import shortenStr from '../utils/utils';
 import newsData from './newsData.json';
 import ScrollToTop from './ScrollToTop';
-import NewsData from './NewsData';
 
 const data = newsData;
 
